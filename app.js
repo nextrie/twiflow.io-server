@@ -17,7 +17,10 @@ var session = new Session();
 io.on('connection', (socket) => {
 	Log("a client connected to the socket");
 	session.addClient(socket);
-	console.log(session);
+
+	socket.on('disconnect', () => {
+		session.removeClient(socket.id);
+	});
 });
 
 http.listen(config.server.port, function(){
