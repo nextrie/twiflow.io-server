@@ -10,8 +10,14 @@ const port = 5000;
 //IO
 const Log = require("./io/Log").Log;
 
+//Networking
+const Session = require("./networking/Session").Session;
+var session = new Session();
+
 io.on('connection', (socket) => {
 	Log("a client connected to the socket");
+	session.addClient(socket);
+	console.log(session);
 });
 
 http.listen(config.server.port, function(){
