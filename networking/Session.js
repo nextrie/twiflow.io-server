@@ -9,10 +9,10 @@ module.exports.Session = class Session
 	{
 		this.clients.forEach(client => {
 			if (client.id === socketID)
-				return (1);
+				return (true);
 		});
 
-		return (0);
+		return (false);
 	}
 
 	removeClient(socketID)
