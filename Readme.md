@@ -14,11 +14,9 @@ Node.JS
 Express
 Socket.IO
 MongoDB
+### `npm install`
+Installs the required packages for the project to work properly.
 
-### `npm start`
+### `node app.js`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Runs the app and listens for incoming connections on port 5000 (dev build, 80 for deployment)
